@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>รายการสินค้า</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+    <script src="file.js"></script>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="header.html">หน้าแรก</a>
+        <a href="index.html">สินค้า</a>
+        <a href=about.html>เกี่ยวกับ</a>
+        <a href="service.html">บริการ</a>
+        <a href="contact.html">ติดต่อ</a>
+        <a href=register.html>สมัครงาน</a>
+        <form>
+            <div class="search">
+                <form>
+                    <input type="text" placeholder="Search...">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+            </div>
+        </form>
+
+    </div>
+
+
+
+    <html>
+
+    <head>
+        <title>My Web Page</title>
+
+    </head>
+    <div class="bg-image">
+
+        <body>
+
+
+            <h1>Welcome to my Web Page</h1>
+            <p>This is a paragraph of text.</p>
+            <hr>
+            <p>This is another paragraph of text.</p>
+            <hr>
+        </body>
+
+    </html>
+    <!--
+    <nav>
+        <ul>
+            <li><a href="#">หน้าแรก</a></li>
+            <li><a href="#">เกี่ยวกับเรา</a></li>
+            <li><a href="#">บริการของเรา</a></li>
+            <li><a href="#">ติดต่อเรา</a></li>
+        </ul>
+    </nav> 
+-->
+
+    <div class="header">
+        <h1>ร้านค้าออนไลน์</h1>
+        <p>เรามีสินค้ามากมายให้คุณได้เลือกซื้อ</p>
+        <center>
+            <h1>รายการสินค้า</h1>
+        </center>
+        <div id="product-list">
+
+        </div>
+    </div>
+    <div>
+        <script>
+            var productList = document.getElementById('product-list');
+            var products = [
+                { name: 'iPhone X', price: 30000, image: 'pic/iphone.jpg' },
+                { name: 'Samsung Galaxy S9', price: 25000, image: 'pic/samsung.jpg' },
+                { name: 'Google Pixel 3', price: 28000, image: 'pic/pixel.jpg' },
+                { name: 'Huawei P20 Pro', price: 20000, image: 'pic/huawei.jpg' },
+                { name: 'OnePlus 7T', price: 22000, image: 'pic/oneplus.jpg' },
+                { name: 'Oppo Reno 2', price: 15000, image: 'oppo.jpg' },
+                { name: 'Vivo V17 Pro', price: 21000, image: 'vivo.jpg' },
+                { name: 'Xiaomi Mi 9', price: 17000, image: 'xiaomi.jpg' },
+                { name: 'Asus ROG Phone 2', price: 29000, image: 'asus.jpg' },
+                { name: 'Realme X2 Pro', price: 18000, image: 'realme.jpg' },
+                { name: 'Nokia 7.2', price: 16000, image: 'nokia.jpg' },
+                { name: 'Sony Xperia 5', price: 23000, image: 'sony.jpg' },
+                { name: 'LG G8X ThinQ', price: 19000, image: 'lg.jpg' },
+                { name: 'Motorola One Zoom', price: 14000, image: 'motorola.jpg' },
+                { name: 'HTC U12 Plus', price: 12000, image: 'htc.jpg' },
+                { name: 'BlackBerry Key2', price: 10000, image: 'blackberry.jpg' },
+            ];
+            for (var i = 0; i < products.length; i++) {
+                var product = products[i];
+                var productElement = document.createElement('div');
+                productElement.className = 'product';
+                productElement.style.display = 'inline-block';
+                productElement.style.width = '300px'; //set width
+                productElement.style.textAlign = 'center';
+                productElement.innerHTML = '<img src="' + product.image + '" width="150" height="150"><h2>' + product.name + '</h2>' + '<p>ราคา: ' + product.price + ' บาท</p>';
+                // create button element
+                var buttonElement = document.createElement('button');
+                buttonElement.innerText = 'สั่งซื้อ';
+                buttonElement.classList.add('buy-button'); // add the class to the button element
+                buttonElement.addEventListener('click', (function (product) {
+                    return function () {
+                        alert('ทำการสั่งซื้อ ' + product.name + ' ราคา ' + product.price + ' บาท');
+                    }
+                })(product));
+                // append button to product div
+                productElement.appendChild(buttonElement);
+                // append button to product div
+                productList.appendChild(productElement);
+            }
+        </script>
+
+    </div>
+
+</body>
+
+<footer>
+    <div class="footer-container">
+        <ul>
+            <li><a href="#">หน้าแรก</a></li>
+            <li><a href="#">เกี่ยวกับเรา</a></li>
+            <li><a href="#">บริการ</a></li>
+            <li><a href="#">ติดต่อเรา</a></li>
+        </ul>
+    </div>
+    <!--
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/privacy-policy">Privacy Policy</a></li>
+        </ul>
+    </nav>
+    -->
+    <address>
+        123 Main St.Anytown, USA 00000
+        Phone: (555) 555-1212<br>
+        Email: info@website.com
+    </address>
+
+    <small>&copy; 2021 Website. All rights reserved.</small>
+</footer>
+
+
+</html>

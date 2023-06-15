@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="bg-image">
+    <div class="navbar">
+        <a href="header.html">หน้าแรก</a>
+        <a href="index.html">สินค้า</a>
+        <a href=about.html>เกี่ยวกับ</a>
+        <a href="service.html">บริการ</a>
+        <a href="contact.html">ติดต่อ</a>
+        <a href=register.html>สมัครงาน</a>
+        <div class="search">
+            <input type="text" placeholder="Search...">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </div>
+    </div>
+    
+    <article>
+        <form action="contact.php" method="post">
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+            <div>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <div>
+                <input type="submit" value="Send Message">
+            </div>
+
+            <style>
+                form {
+                    width: 80%;
+                    margin: 0 auto;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    font-family: Arial, sans-serif;
+                }
+
+                label {
+                    font-weight: bold;
+                }
+
+                input,
+                textarea {
+                    padding: 10px;
+                    margin: 5px;
+                    border: 2px solid #ccc;
+                    border-radius: 5px;
+                    font-size: 16px;
+                    font-family: Arial, sans-serif;
+                }
+
+                input[type="submit"] {
+                    background-color: #4CAF50;
+                    color: white;
+                    padding: 10px 20px;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
+
+                input[type="submit"]:hover {
+                    background-color: #45a049;
+                }
+
+                input:focus,
+                textarea:focus {
+                    outline: none;
+                    border: 2px solid #6cb2eb;
+                }
+            </style>
+
+        </form>
+    </article>
+</div>
+</body>
+
+</html>

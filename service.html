@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>สินค้า</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='service.css') }}">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="navbar">
+            <a href="header.html">หน้าแรก</a>
+            <a href="index.html">สินค้า</a>
+            <a href=about.html>เกี่ยวกับ</a>
+            <a href="service.html">บริการ</a>
+            <a href="contact.html">ติดต่อ</a>
+            <a href=register.html>สมัครงาน</a>
+            <form>
+                <div class="search">
+                    <form>
+                        <input type="text" placeholder="Search...">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                </div>
+            </form>
+            
+        </div>
+        <h1>สินค้า</h1>
+        <form action="/add" method="post">
+            <input type="text" name="item" placeholder="เพิ่มสินค้า">
+            <input type="submit" value="เพิ่ม">
+        </form>
+        <ul>
+            {% for item in items %}
+            <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,56 @@
+/* เนื้อหา Navbar */
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    margin-right: 10px;
+    font-family: 'Montserrat', sans-serif;
+    /* เลือกฟอนต์ */
+    font-size: 16px;
+    /* ขนาดฟอนต์ */
+    transition: all 0.3s ease;
+    /* การเพิ่มอนิเมชัน */
+}
+
+.navbar {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+    background-color: #f1f1f1;
+}
+
+.navbar a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+}
+
+.navbar a:hover {
+    color: #f1f1f1;
+}
+
+@media screen and (max-height: 450px) {
+    .navbar {
+        padding-top: 15px;
+    }
+
+    .navbar a {
+        font-size: 18px;
+    }
+}
